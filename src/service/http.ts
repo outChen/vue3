@@ -1,26 +1,29 @@
 import axios from "axios"
-
-const service = axios.create({
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError} from "axios"
+const service: AxiosInstance  = axios.create({
   baseURL: "",
   timeout: 100,
 })
+const errorHandler = (error: AxiosError) => {
+  console.log('errror', error)
+  // switch (error.response) {
+  //   case 401:
+  //     break;
+  //   default:
+  //     break;
+  // }
+}
 // 添加请求拦截器
-service.interceptors.request.use(function (config) {
+service.interceptors.request.use((config:AxiosRequestConfig) => {
   // 在发送请求之前做些什么
   return config
-}, function (error) {
-  // 对请求错误做些什么
-  return Promise.reject(error)
-})
+}, (errorHandler))
 
 // 添加响应拦截器
-service.interceptors.response.use(function (response) {
+service.interceptors.response.use((response:AxiosResponse) => {
   // 对响应数据做点什么
   return response
-}, function (error) {
-  // 对响应错误做点什么
-  return Promise.reject(error)
-})
+}, (errorHandler))
 
 
 export default service

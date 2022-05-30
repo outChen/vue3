@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     "vue/multi-word-component-names": ["error", {
       "ignores": ['index']
-    }]
+    }],
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 };
