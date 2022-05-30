@@ -1,5 +1,5 @@
 {
-  "name": "chen-vue3",
+  "name": "new-vue3",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.13",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },
@@ -20,18 +21,12 @@
     "@types/node": "^16.11.27",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
-    "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "@vue/test-utils": "^2.0.0-rc.20",
     "@vue/tsconfig": "^0.1.3",
-    "eslint": "^8.15.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^8.7.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^8.2.0",
     "jsdom": "^19.0.0",
-    "prettier": "^2.5.1",
     "typescript": "~4.6.3",
     "vite": "^2.9.5",
     "vitest": "^0.9.3",

@@ -13,16 +13,7 @@ module.exports = {
   },
   rules: {
     "vue/multi-word-component-names": ["error", {
-      "ignores": ["index"]
-    }],
-    '@typescript-eslint/no-var-requires': 0,
-    "no-label-var": 2,
-    "no-labels": [
-      2,
-      {
-        allowLoop: true,
-        allowSwitch: true,
-      },
-    ],
-  },
+      "ignores": ['index']
+    }]
+  }
 };
