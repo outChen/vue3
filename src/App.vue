@@ -1,9 +1,6 @@
 <template>
-  <div><span>jfadslfjlsdfjldjfdl</span></div>
-  <Name></Name>
-  <RouterView />
+  <router-view/>
 </template>
-<script setup lang="ts">
-import { RouterView } from "vue-router";
-import Name from '@/views/componets/Name/index.vue'
-</script>
+
+<style lang="less">
+</style>

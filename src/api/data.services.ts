@@ -9,5 +9,5 @@ interface Params {
   [propName: string]:any
 }
 export function login<U>(params:Params): Promise<DATA<U>>{
-  return service.get('api', {params}) ; 
+  return service.post('api/login', {params}) ; 
 }

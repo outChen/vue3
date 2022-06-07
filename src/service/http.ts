@@ -1,7 +1,7 @@
 import axios from "axios"
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError} from "axios"
 const service: AxiosInstance  = axios.create({
-  baseURL: "",
+  baseURL: "https://www.fastmock.site/mock/2613404959c2ef31c547d6d697994bca/jason/",
   timeout: 100,
 })
 const errorHandler = (error: AxiosError) => {
