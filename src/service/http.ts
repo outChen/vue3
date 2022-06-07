@@ -1,4 +1,5 @@
 import axios from "axios"
+import { ElMessage } from 'element-plus'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError} from "axios"
 const service: AxiosInstance  = axios.create({
   baseURL: "https://www.fastmock.site/mock/2613404959c2ef31c547d6d697994bca/jason/",
@@ -21,6 +22,11 @@ service.interceptors.request.use((config:AxiosRequestConfig) => {
 
 // 添加响应拦截器
 service.interceptors.response.use((response:AxiosResponse) => {
+  const {code, msg} = response?.data
+  if(code === 200 || code === '200') {
+    return response.data
+  }
+  ElMessage.error(msg)
   // 对响应数据做点什么
   return response
 }, (errorHandler))

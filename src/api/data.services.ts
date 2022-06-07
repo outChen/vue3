@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 import service from "@/service/http";
 interface DATA<T> {
   code: number, // 请求code值
