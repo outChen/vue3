@@ -11,10 +11,21 @@ const routes: Array<RouteRecordRaw> = [
   //   redirect: '/login',
   // },
   {
-    path: '/index',
-    name: 'Index',
-    component:() => import ('@/views/layout/index.vue')
-  }
+    path: '/manage',
+    component:() => import ('@/views/layout/index.vue'),
+    children: [
+      {
+        path: '/user',
+        name: 'User',
+        component: () => import('@/views/user/index.vue')
+      },
+      {
+        path:'/hooks',
+        name:'Hooks',
+        component:() => import('@/views/hooks/index.vue')
+      }
+    ]
+  },
 ]
 
 const router:any = createRouter({

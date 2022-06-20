@@ -12,6 +12,6 @@ import { useRouter } from "vue-router"
     const params: UserInfo = {admin:'123'}
     store.handleLogin(params)
     console.log('dayin', router)
-    router.push({path:'/index'})
+    router.push({path:'/user'})
   }
 </script>
